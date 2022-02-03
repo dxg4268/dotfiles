@@ -29,7 +29,7 @@ pgrep bspswallow || nohup ~/.scripts/bspswallow &
 
 # Workspaces
 
-bspc monitor LVDS-1 -d 1 2 3 4 5 6 7 8 9 
+bspc monitor LVDS-1 -d I II III IV V VI VII VIII IX 
 bspc config border_width         2
 bspc config window_gap          10
 bspc config top_padding 0
@@ -66,14 +66,6 @@ bspc rule -a Screenkey manage=off
 bspc config pointer_modifier mod4
 
 #sleep 0.69
-
-# Autostart applications:
-
-# Start Polyba   
-~/.config/polybar/scripts/launch-polybar.sh &
-picom --config /home/dxg/.config/picom/picom.conf
-# Start floating kitty terminal
-#bspc rule -a \* -o state=floating && sleep 0.015 ; kitty -e $SHELL -c "$HOME/.config/neofetch/launch-neofetch.sh && $SHELL" &
  
 
 # Start firefox
