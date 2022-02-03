@@ -6,7 +6,7 @@
 #                 ░▀▀░░▀▀▀░▀░░░▀░▀░▀░▀
 #
 
-$HOME/.scripts/custom-autostart
+#$HOME/.scripts/custom-autostart
 
 #nm-applet &
 xsetroot -cursor_name left_ptr
@@ -19,7 +19,7 @@ xset -dpms s off & # disable screen blanking
 dropbox &
 dunst &
 nautilus --gapplication-service &
-~/.config/polybar/scripts/launch-polybar.sh &
+#~/.config/polybar/scripts/launch-polybar.sh &
 
 
 # Swallow
