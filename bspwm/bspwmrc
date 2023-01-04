@@ -1,0 +1,43 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+
+###### Autostart ######
+picom &
+nitrogen --restore &
+dunst -c ~/.config/dunst/dunstrc &
+xsetroot -cursor_name left_ptr &
+~/.config/polybar/launch.sh &
+#~/.local/bin/eww -c ~/.config/eww/bar --restart open bar &  
+
+#sh /home/aditya/.config/polybar/launch.sh &
+
+###### BSPWM Config ######
+bspc monitor -d 1 2 3 4 5
+
+bspc config border_width         2 
+bspc config window_gap           10
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+
+###### Colors ######
+#. "${HOME}/.cache/wal/colors.sh"
+
+
+#bspc config focused_border_color "#FFDEDE" 
+bspc config focused_border_color "#8fbcbb" 
+bspc config normal_border_color "#4c566a"
+bspc config active_border_color "#B4E3AD"
+bspc config presel_feedback_color "#E5A3A1"
+
+
+bspc rule -a <WM_CLASS> state=floating rectangle=300x300+600+250
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
