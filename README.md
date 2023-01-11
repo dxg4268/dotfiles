@@ -1,7 +1,5 @@
 
-# BSPWM Dotfiles ![image](https://user-images.githubusercontent.com/65886209/211834094-64d50736-7a04-4ce7-942d-9c3ee1b8f016.png)
-
-
+# BSPWM Dotfiles ☕
 Grab whatever you want...
 
 
